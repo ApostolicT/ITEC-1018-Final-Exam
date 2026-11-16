@@ -1,0 +1,14 @@
+Declare number
+Declare price
+
+Display "Please enter number of items."
+Input number
+
+Display "Please enter the price."
+Input price
+
+Declare subtotal = number*price
+Declare sales tax = 0.08*subtotal
+Declare total = subtotal+sales tax
+
+Display subtotal, sales tax, total
