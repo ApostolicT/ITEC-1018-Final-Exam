@@ -1,0 +1,69 @@
+Class InventoryItem
+    Private String itemName
+    Private Integer quantity
+    Private Real price
+
+   
+
+    // Constructor
+    Public Module InventoryItem(String name, Integer qty, Real p)
+        Set itemName = name
+        Set quantity = qty
+        Set price = p
+    End Module
+End Class
+
+get ItemName() As String
+        Return itemName
+    End get
+
+    get Quantity() As Integer
+        Return quantity
+    End get
+
+    get Price() As Real
+        Return price
+    End get
+
+    
+    Public Function TotalValue() As Real
+        Return quantity * price
+    End Function
+End Class
+
+get setter ItemName(value As String)
+        Set itemName = value
+    End setter
+
+    get setter Quantity(value As Integer)
+        Set quantity = value
+    End setter
+
+    get setter Price(value As Real)
+        Set price = value
+    End setter
+End Class
+
+method calculateValue() As Real
+        Return quantity * price
+    End method
+End Class
+
+method displayItem()
+        Print "Item Name: " + itemName
+        Print "Quantity: " + quantity
+        Print "Price: " + price
+        Print "Calculated Value: " + TotalValue()
+    End method
+End Class
+
+Declare item1 As InventoryItem = New InventoryItem("Sample", 10, 2.5)
+Declare item2 As InventoryItem = New InventoryItem("Sample2", 5, 3.0)
+
+Call item1.displayItem()
+Call item2.displayItem()
+
+item1.setQuantity(15)
+Call item1.displayItem()
+
+Display "Total value of item1: " + item1.TotalValue()
