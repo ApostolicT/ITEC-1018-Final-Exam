@@ -1,0 +1,24 @@
+Declare NumberOfStudents
+Declare IndividualScore
+Declare TotalScore
+Declare NumberOfStudentsThatScored90OrAbove
+
+Display "Enter the number of students."
+Input NumberOfStudents
+
+Set TotalScore = 0
+Set NumberOfStudentsThatScored90OrAbove = 0
+
+For i = 1 To NumberOfStudents
+    Display "Enter the student's score."
+    Input IndividualScore
+    Set TotalScore = TotalScore + IndividualScore
+    If IndividualScore => 90
+        Set NumberOfStudentsThatScored90OrAbove = NumberOfStudentsThatScored90OrAbove + 1
+End For
+
+
+Set Average = TotalScore / NumberOfStudents
+
+Display  NumberOfStudentsThatScored90OrAbove
+Display Average

@@ -1,0 +1,20 @@
+Declare Integer studentCount = 0
+Open "classlist.txt" for Input as inputFile
+
+While NOT EOF(inputFile)
+    Read name from inputFile
+    Set studentCount = studentCount + 1
+End While
+
+Open "roster.txt" for Output as outputFile
+rite "Class Roster" to outputFile
+
+Close "classlist.txt"
+Open "classlist.txt" for Input as inputFile
+
+While NOT EOF(inputFile)
+    Read name from inputFile
+    Set name = upperCase
+End While
+
+Display studentCount

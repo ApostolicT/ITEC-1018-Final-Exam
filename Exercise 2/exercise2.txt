@@ -1,0 +1,15 @@
+Declare GPA
+Declare SAT
+Declare ACT
+
+Display "Enter your GPA score, SAT score, and ACT score. If you didn't take the SAT or the ACT, enter a 0 as the score."
+Input GPA
+Input SAT
+Input ACT
+
+If GPA >= 3.5 AND (SAT >= 1200 OR ACT >= 25)
+    Display "You are eligible."
+Else
+    Display "You are not eligible."
+
+End If

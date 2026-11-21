@@ -1,0 +1,28 @@
+Display "Enter a sentence or a phrase."
+
+Declare Integer charCount = 0
+Declare Integer wordCount = 1
+
+For i = 0 to length(phrase) - 1
+    If phrase[i] != " " Then
+        Set charCount = charCount + 1
+    Else
+        Set wordCount = wordCount + 1
+    End If
+End For
+
+Declare string
+
+Set cleanedPhrase = toLower(replace(phrase, " ", ""))
+
+
+Set reversedPhrase = ""
+For i = length(cleanedPhrase) - 1 down to 0
+    Set reversedPhrase = reversedPhrase + cleanedPhrase[i]
+End For
+
+If cleanedPhrase == reversedPhrase Then
+    Display "The phrase is a palindrome."
+Else
+    Display "The phrase is not a palindrome."
+End If
