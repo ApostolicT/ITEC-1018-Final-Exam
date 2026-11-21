@@ -44,17 +44,17 @@ get setter ItemName(value As String)
     End setter
 End Class
 
-method calculateValue() As Real
+Public Method calculateValue() As Real
         Return quantity * price
-    End method
+    End Method
 End Class
 
-method displayItem()
+Public Method displayItem()
         Print "Item Name: " + itemName
         Print "Quantity: " + quantity
         Print "Price: " + price
         Print "Calculated Value: " + TotalValue()
-    End method
+    End Method
 End Class
 
 Declare item1 As InventoryItem = New InventoryItem("Sample", 10, 2.5)
