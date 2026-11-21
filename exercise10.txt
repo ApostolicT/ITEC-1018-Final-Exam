@@ -1,0 +1,28 @@
+While NumberofSides != 4
+    Display "Enter the number 1 to calculate the area of a circle, 2 for a rectangle, or 3 for a triangle."
+    Input NumberofSides
+
+    If NumberofSides == 1 Then
+        Display "Enter the radius of the circle:"
+        Input radius
+        area = 3.14 * radius * radius
+        Display "The area of the circle is: " + area
+    Else If NumberofSides == 2 Then
+        Display "Enter the length of the rectangle:"
+        Input length
+        Display "Enter the width of the rectangle:"
+        Input width
+        area = length * width
+        Display "The area of the rectangle is: " + area
+    Else If NumberofSides == 3 Then
+        Display "Enter the base of the triangle:"
+        Input base
+        Display "Enter the height of the triangle:"
+        Input height
+        area = 0.5 * base * height
+        Display "The area of the triangle is: " + area
+    Else 
+        Display "Invalid input. Please enter a number between 1 and 3."
+    End If
+End While
+
